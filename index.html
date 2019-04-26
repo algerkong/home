@@ -12,10 +12,10 @@
 		<nav>
 			<div class="nav">
 				<div class="nav1">
-					<a href="#">Gmail</a>
+					<a href="https://mail.qq.com/cgi-bin/loginpage">Gmail</a>
 				</div>
 				<div class="nav1">
-					<a href="#">图片</a>
+					<a href="https://www.bing.com/images/trending?FORM=BESBTB">图片</a>
 				</div>
 				<div class="img">
 					<img src="images/1.png"/>
@@ -31,11 +31,38 @@
 	<serch>
 		<form id="bdfm" target="_blank" name="bdfm" method="get" action="http://www.baidu.com/s">
 			<div class="serchp">
-				<input name="word" class="serch" type="text"/>
+				<input name="word" class="serch" type="text" autocomplete="on"/>
 				<div class="yy"></div>
 				<input type="submit" class="but" value="搜索" />
 			</div>
 		</form>
 	</serch>
+	<div class="you"><a onclick="my()">你的建议</a></div>
+	<script>
+		function my(){
+			var you = document.getElementsByClassName("jy1")[0];
+			you.className = "jy";
+		}
+	</script>
+	<div class="jy1">
+		<form action="MAILTO:1455048564@qq.com" method="post" enctype="text/plain">
+			姓名：<br />
+			<input class="jynm" type="text" name="name" placeholder="你的昵称..." size="20">
+			<br />
+			电邮：<br />
+			<input class="jynm" type="text" name="mail" placeholder="你的邮箱地址..." size="20">
+			<br />
+			内容：<br />
+			<textarea type="text" name="coment"   cols="40"   rows="4"   style="OVERFLOW:   hidden"></textarea>
+			<br /><br />
+			<input onClick="xs()" type="submit" value="发送" width="50px" height="20px" >
+		</form>
+			<script>
+				function xs(){
+					var you = document.getElementsByClassName("jy")[0];
+					you.className = "jy1";
+				}
+			</script>
+	</div>
 </body>
 </html>
