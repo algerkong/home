@@ -5,7 +5,7 @@ a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, 
 }
 body {background-image: url("bing.php");}
 .nav{
-	width: 220px;
+	width: 200px;
 	height: 40px;
 	line-height: 40px;
 	float: left;
@@ -17,7 +17,7 @@ body {background-image: url("bing.php");}
 	width: 119px;
 	height: 45.5px;
 	position: fixed;
-	top: 10px;
+	top: 5px;
 	left: 30px;
 	background-image: url(images/logom.png);
 	background-size: 100% 100%;
@@ -115,9 +115,12 @@ body {background-image: url("bing.php");}
 	list-style: none;
 }
 .logo{
-	width: 546px;
+	max-width: 546px;
 	height: 195px;
+	background-image: url(images/logo.gif);
 	margin: 100px auto 0 auto;
+	background-size: 100% 100%;
+	zoom: 1;
 }
 .serch{
 	width: 500px;
