@@ -30,3 +30,15 @@ function xs(){
 					you.className = "jy1";
 		}
 /*你的建议打开关闭*结束**/
+
+/*关于网站打开关闭*结束**/
+function jy(){
+			var you = document.getElementsByClassName("gya")[0];
+			you.className = "gy";
+		}
+		
+function jyy(){
+					var you = document.getElementsByClassName("gy")[0];
+					you.className = "gya";
+		}
+/*关于网站打开关闭*结束**/
