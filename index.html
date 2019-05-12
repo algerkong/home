@@ -7,13 +7,25 @@
 	<link rel="icon" href="favicon.ico">
 	<script src="js/main.js">
 	</script>
+	<script type="”text/javascript”" src="”../jquery-1.5.2.min.js”"></script>
+	<script type="”text/javascript”" src="”../bgstretcher.js”"></script>
+	<link rel="”stylesheet”" href="”../bgstretcher.css”">
 </head>
-
+	<script type="”text/javascript”">
+	$(document).ready(function(){
+	$(’.logo’).bgStretcher({
+    images: ['http://t.cn/ESLCJMP', 'http://t.cn/ESLCbL2', 'http://t.cn/ESLSBQJ', 'images/logo.gif'],
+    imageWidth: 546,
+    imageHeight: 195
+    });
+});
+</script>
 <body style="overflow-x:hidden;overflow-y:hidden" >
 <jy onclick="xs()" >
 	<header>
 		<nav>
 			<div class="logom">
+				<a href="https://github.com/algerkong/"> </a>
 			</div>
 			<div class="nav">
 				<div class="nav1">
@@ -49,7 +61,6 @@
 			
 		</nav>
 	</header>
-
 <fon onclick="bd()">
 <gyy onclick="jyy()">
 	<main >
@@ -58,7 +69,7 @@
 		</div>
 	</main>
 	<serch>
-		<form id="bdfm" target="_blank" name="bdfm" method="get" action="http://www.baidu.com/s" autocomplete="on">
+		<form id="bdfm" target="_blank" name="bdfm" method="get" action="http://www.google.com/search" autocomplete="on">
 			<div class="serchp">
 				<input name="word" class="serch" type="text" />
 				<div class="yy" ></div>
@@ -66,11 +77,15 @@
 			</div>
 		</form>
 	</serch>
-	
-	
+	<!--<div class="btn-play">
+		<audio controls class="play">
+			<source src="lixiang.mp3" type="audio/mpeg">
+		</audio>
+	</div>-->
 </gyy>
 </fon>
 </jy>
+
 <div class="jy1">
 		<form action="MAILTO:1455048564@qq.com" method="post" enctype="text/plain">
 			姓名：<br />
@@ -83,6 +98,7 @@
 			<textarea type="text" name="coment"   cols="40"   rows="4"   style="OVERFLOW:   hidden"></textarea>
 			<br />
 			<br />
+			
 			<input onClick="xs()" type="submit" value="发送" width="50px" height="20px" >
 		</form>
 	</div>
@@ -98,5 +114,5 @@
 	<div class="lx"><a href="http://wpa.qq.com/msgrd?v=3&uin=1455048564&site=qq&menu=yes" target="_Blank" >联系作者</a></div>
 	<div class="gy1"><a onclick="jy()">关于网站</a></div>
 </div>
-</body>
+</body>	
 </html>

@@ -43,7 +43,49 @@ function jyy(){
 		}
 /*关于网站打开关闭*结束**/
 
-
+/*播放暂停按钮*/
+/* function play(){
+			var play = document.getElementsByClassName("btn_play")[0];
+			play.className = "btn_play1"; 
+		}
+function play1(){
+			var play1 = document.getElementsByClassName("btn_play1") ||  [0];
+			play1.className = "btn_play"; 
+		} */
+    var clickNumber =0;
+    $('.btn_play').click(function(){
+			if(clickNumber %2==0){
+							  
+			}else{
+							var play1 = document.getElementsByClassName("btn_play1")[0];
+							play1.className = "btn_play"; 
+			}
+			clickNumber ++;
+			})
+/*播放暂停按钮*/
+/*音乐播放*/
+    $(function(){
+        //播放完毕
+        $('#mp3Btn').on('ended', function() {
+            console.log("音频已播放完成");
+            $('.btn-audio').css({'background':'url(images/voice_stop.png) no-repeat center bottom','background-size':'cover'});
+        })
+        //播放器控制
+        var audio = document.getElementById('mp3Btn');
+        audio.volume = .3;
+        $('.btn-audio').click(function() {
+            event.stopPropagation();//防止冒泡
+            if(audio.paused){ //如果当前是暂停状态
+                $('.btn-audio').css({'background':'url(images/voice_play.png) no-repeat center bottom','background-size':'cover'});
+                audio.play(); //播放
+                return;
+            }else{//当前是播放状态
+                $('.btn-audio').css({'background':'url(images/voice_stop.png) no-repeat center bottom','background-size':'cover'});
+                audio.pause(); //暂停
+            }
+        });
+    })
+/*音乐播放*/
 
 
 /*手机自适应开始*/
