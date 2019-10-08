@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-	<meta content="en-us" http-equiv="Content-Language" />
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Star</title>
-</head>
-<style>
-	/*下方这句不动它，翻译开始*/
+	<head>
+		<meta content="en-us" http-equiv="Content-Language" />
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Star</title>
+	</head>
+	<style>
+		/*下方这句不动它，翻译开始*/
 
 	* {
 		padding: 0;
@@ -378,8 +378,8 @@ logo添加文字样式
 		}
 	}
 </style>
-<style>
-	#search_input {
+	<style>
+		#search_input {
 		width: 90%;
 		height: 60px;
 		background-color: transparent;
@@ -709,93 +709,111 @@ logo添加文字样式
 }
 </style>
 
-<body>
-	<div id="content">
-		<br />
-		<div class="search_part">
-			<a class="logo" href="https://mijisou.com/">
-				<img class="smaller" src="logo/logo.png" />
-			</a>
+	<body>
+
+		<!-- 天气 -->
+		<script type="text/javascript">
+			WIDGET = {
+				FID: 'OKN1GkCwT4'
+			}
+		</script>
+		<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+		<div id="content">
 			<br />
-			<form onsubmit="return search()" class="search_bar">
-				<input type="submit" id="search_submit" value="⠩">
-				<span><input class="search" type="text" value="" autocomplete="off" id="search_input"></span>
-			</form>
+			<div class="search_part">
+				<a class="logo" href="https://mijisou.com/">
+					<img class="smaller" src="logo/logo.png" />
+				</a>
+				<br />
+				<form onsubmit="return search()" class="search_bar">
+					<input type="submit" id="search_submit" value="⠩">
+					<span><input class="search" type="text" value="" autocomplete="off" id="search_input"></span>
+				</form>
+			</div>
+			<br />
+
+
+			<div class="box">
+				<a href="https://www.google.com/"></a>
+				<p><img class="icon" src="img/Google.png"></p>
+				<p class="url">Google</p>
+			</div>
+
+
+			<div class="box">
+				<a href="http://www.mfyingyuan.com/"></a>
+				<p><img class="icon" src="img/视频.png"></p>
+				<p class="url">视频</p>
+			</div>
+
+			<div class="box">
+				<a href="https://www.nfmovies.com/"></a>
+				<p><img class="icon" src="img/影视.png"></p>
+				<p class="url">影视</p>
+			</div>
+
+			<div class="box">
+				<a href="https://www.bilibili.com/"></a>
+				<p><img class="icon" src="img/动漫.png"></p>
+				<p class="url">哔哩哔哩</p>
+			</div>
+
+			<div class="box">
+				<a href="https://www.huya.com/"></a>
+				<p><img class="icon" src="img/直播.png"></p>
+				<p class="url">直播</p>
+			</div>
+
+
+			<div class="box">
+				<a href="http://www.pansoso.com/"></a>
+				<p><img class="icon" src="img/网盘.png"></p>
+				<p class="url">网盘</p>
+			</div>
+
+			<div class="box">
+				<a href="http://clssr.cn/user"></a>
+				<p><img class="icon" src="img/SS.png"></p>
+				<p class="url">SS</p>
+			</div>
+
+			<div class="box">
+				<a href="https://mijisou.com/"></a>
+				<p><img class="icon" src="img/搜索.png"></p>
+				<p class="url">搜索</p>
+			</div>
+
+			<div class="box">
+				<a href="http://www.bing.com/translator/?"></a>
+				<p><img class="icon" src="img/翻译.png"></p>
+				<p class="url">翻译</p>
+			</div>
+
+			<div class="box">
+				<a href="https://www.coolapk.com/"></a>
+				<p><img class="icon" src="img/cool.png"></p>
+				<p class="url">酷安</p>
+			</div>
+
+
+
+
+
 		</div>
-		<br />
 
+		<script type="text/javascript">
+			function search() {
+				if (document.getElementById("search_input").value != "") {
+					window.location.href =
+						"https://www.baidu.com/s?ie=utf-8&rn=30&tn=baiduhome_pg&oq=%E5%BC%A0%E7%B1%BD%E6%B2%90&rsv_enter=0&wd=" +
+						document.getElementById("search_input").value;
+					document.getElementById("search_input").value = "";
+				}
+				return false;
+			}
+		</script>
 
-		<div class="box">
-			<a href="https://www.google.com/"></a>
-			<p><img class="icon" src="img/Google.png"></p>
-			<p class="url">Google</p>
-		</div>
-
-
-		<div class="box">
-			<a href="http://www.mfyingyuan.com/"></a>
-			<p><img class="icon" src="img/视频.png"></p>
-			<p class="url">视频</p>
-		</div>
-
-		<div class="box">
-			<a href="https://www.nfmovies.com/"></a>
-			<p><img class="icon" src="img/影视.png"></p>
-			<p class="url">影视</p>
-		</div>
-
-		<div class="box">
-			<a href="https://www.bilibili.com/"></a>
-			<p><img class="icon" src="img/动漫.png"></p>
-			<p class="url">哔哩哔哩</p>
-		</div>
-
-		<div class="box">
-			<a href="https://www.huya.com/"></a>
-			<p><img class="icon" src="img/直播.png"></p>
-			<p class="url">直播</p>
-		</div>
-
-
-		<div class="box">
-			<a href="http://www.pansoso.com/"></a>
-			<p><img class="icon" src="img/网盘.png"></p>
-			<p class="url">网盘</p>
-		</div>
-
-		<div class="box">
-			<a href="http://clssr.cn/user"></a>
-			<p><img class="icon" src="img/SS.png"></p>
-			<p class="url">SS</p>
-		</div>
-
-		<div class="box">
-			<a href="https://mijisou.com/"></a>
-			<p><img class="icon" src="img/搜索.png"></p>
-			<p class="url">搜索</p>
-		</div>
-
-		<div class="box">
-			<a href="http://www.bing.com/translator/?"></a>
-			<p><img class="icon" src="img/翻译.png"></p>
-			<p class="url">翻译</p>
-		</div>
-
-		<div class="box">
-			<a href="https://www.coolapk.com/"></a>
-			<p><img class="icon" src="img/cool.png"></p>
-			<p class="url">酷安</p>
-		</div>
-
-
-
-
-
-	</div>
-
-	<script
-		type="text/javascript">function search() { if (document.getElementById("search_input").value != "") { window.location.href = "https://www.baidu.com/s?ie=utf-8&rn=30&tn=baiduhome_pg&oq=%E5%BC%A0%E7%B1%BD%E6%B2%90&rsv_enter=0&wd=" + document.getElementById("search_input").value; document.getElementById("search_input").value = ""; } return false; }</script>
-
-</body>
+	</body>
 
 </html>
