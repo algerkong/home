@@ -378,6 +378,9 @@ logo添加文字样式
 			transform: translateY(0)
 		}
 	}
+		.sj{
+			display:none;
+		}
 </style>
 	<style>
 		#search_input {
@@ -445,7 +448,9 @@ logo添加文字样式
 		-webkit-animation: flipInX 4s;
 	}
 	@media screen and (max-width: 768px) {
-		
+		.dn{
+			display:none;
+		}
 	* {
 		padding: 0;
 		margin: 0;
@@ -719,7 +724,15 @@ logo添加文字样式
 					<img class="smaller" src="logo/logo.png" />
 				</a>
 				<br />
-				<form onsubmit="return search()" class="search_bar">
+				<!--<form onsubmit="return search()" class="search_bar">
+					<input type="submit" id="search_submit" value="⠩">
+					<span><input class="search" type="text" value="" autocomplete="off" id="search_input"></span>
+				</form>-->
+				<form onsubmit="https://www.baidu.com/s" class="search_bar dn">
+					<input type="submit" id="search_submit" value="⠩">
+					<span><input class="search" type="text" value="" autocomplete="off" id="search_input"></span>
+				</form>
+				<form onsubmit="https://www.baidu.com/from=844b/s?word" class="search_bar sj">
 					<input type="submit" id="search_submit" value="⠩">
 					<span><input class="search" type="text" value="" autocomplete="off" id="search_input"></span>
 				</form>
