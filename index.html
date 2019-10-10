@@ -734,14 +734,15 @@ form.search_bar.dn {
 					<input type="submit" id="search_submit" value="⠩">
 					<span><input class="search" type="text" value="" autocomplete="off" id="search_input"></span>
 				</form>-->
-				<form action="https://www.baidu.com/s" class="search_bar dn">
+				<form onsubmit="return search()" class="search_bar dn">
 					<input type="submit" id="search_submit" value="⠩">
 					<span><input class="search" type="text" value="" autocomplete="off" id="search_input"></span>
 				</form>
-				<form action="https://www.baidu.com/from=844b/s?word" class="search_bar sj">
+				<form onsubmit="return searchsj()" class="search_bar sj">
 					<input type="submit" id="search_submit" value="⠩">
 					<span><input class="search" type="text" value="" autocomplete="off" id="search_input"></span>
 				</form>
+
 			</div>
 			<br />
 
@@ -819,6 +820,15 @@ form.search_bar.dn {
 				if (document.getElementById("search_input").value != "") {
 					window.location.href =
 						"https://www.baidu.com/s?ie=utf-8&rn=30&tn=baiduhome_pg&oq=%E5%BC%A0%E7%B1%BD%E6%B2%90&rsv_enter=0&wd=" +
+						document.getElementById("search_input").value;
+					document.getElementById("search_input").value = "";
+				}
+				return false;
+			}
+			function searchsj() {
+				if (document.getElementById("search_input").value != "") {
+					window.location.href =
+						"https://www.baidu.com/from=844b/s?word=" +
 						document.getElementById("search_input").value;
 					document.getElementById("search_input").value = "";
 				}
