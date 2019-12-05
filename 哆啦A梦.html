@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+
+		<style type="text/css">
+			.bg {
+				width: 284px;
+				margin:100px auto 0 auto;
+			}
+			/* 头 */
+			.header {
+				width: 284px;
+				height: 284px;
+				border: 2px solid #000000;
+				box-sizing: border-box;
+				border-radius: 50%;
+				background-color: #0785e6;
+				position: relative;
+			}
+			/* 脸 */
+			.face {
+				width: 268px;
+				height: 234px;
+				border: 2px solid #000000;
+				background-color: #ffffff;
+				border-radius: 50%;
+				position: absolute;
+				top: 48px;
+				left: 3px;
+			}
+			/* 眼 */
+			.eye{
+				width: 124px;
+				margin: 0 auto;
+				position: relative;
+				top: 20px;
+				
+			}
+			.eye>.eye-1{
+				box-sizing: border-box;
+				width: 58px;
+				height: 75px;
+				background-color: #ffffff;
+				border: 2px solid #000000;
+				border-radius: 50%;
+				float: left;
+				
+			}
+			.e-1{
+				box-sizing: border-box;
+				width: 20px;
+				height: 32px;
+				background-color: #000000;
+				border-radius: 50%;
+				margin: 30px;
+				padding-top: 10px;
+				transition: all 0.5s;
+			}
+			.e-2{
+				width: 6px;
+				height: 8px;
+				background-color: #FFFFFF;
+				border-radius: 50%;
+				margin: 10px;
+			}
+			
+			
+			/* 鼻子 */
+			.nose{
+				box-sizing: border-box;
+				width: 38px;
+				height: 38px;
+				background-color: #b63328;
+				border-radius: 50%;
+				margin: 0 auto;
+				top: 70px;
+				left: -2px;
+				position: relative;
+				padding: 10px;
+			}
+			.nose>div{
+				width: 10px;
+				height: 8px;
+				border-radius: 50%;
+				background-color: #FFFFFF;
+			}
+			.m-c{
+				width: 0;
+				height: 125px;
+				border: 1px solid #000000;
+				margin: 0 auto;
+				top: 70px;
+				left: -2px;
+				position: relative;
+			}
+			.l-1,.l-2,.l-3,.r-1,.r-2,.r-3{
+				position: absolute;
+				width: 90px;
+				height: 0;
+				border-top: 2px solid #000000;
+			}
+			.beard-l{
+				position: relative;
+				right: -20px;
+			}
+			
+			.beard-l>.l-1{
+				top: -40px;
+				-webkit-transform: rotate(25deg);
+			}
+			.beard-l>.l-3{
+				top: 40px;
+				-webkit-transform: rotate(-25deg);
+			}
+			.beard-r{
+				position: relative;
+				right: -170px;
+			}
+			.beard-r>.r-1
+			{ 
+				-webkit-transform: rotate(155deg);
+				top: -40px;
+			}
+			.beard-r>.r-3
+			{  
+				-webkit-transform: rotate(30deg);
+				top: 40px;
+			}
+			.mouth{
+				position: relative;
+				width: 190px;
+				height: 90px;
+				border: 2px solid #000;
+				border-top-color: transparent;
+				border-radius: 0 0 90px 90px;
+				margin: 0 auto;
+				top: -22px;
+				transition: all 0.5s;
+			}
+			
+			/* 邪恶表情 */
+			.header:hover .e-1{
+				margin: 8px;
+			}
+			.header:hover .mouth{
+				width: 130px;
+			}
+			.qt{
+				width: 284px;
+				position: relative;
+			}
+			.qt>.blades{
+				width: 110px;
+				height: 6px;
+				background-color: #FFFFFF;
+				margin: 0 auto;
+				border: 2px solid #000000;
+				border-radius: 6px;
+			}
+			.qt>.stick{
+				width: 4px;
+				height: 60px;
+				background-color: darkgoldenrod;
+				margin: 0 auto;
+				border: #000000 1px solid;
+				
+			}
+			.qt>.base{
+				width: 30px;
+				height: 20px;
+				border: #000000 1px solid;
+				border-radius: 50%;
+				background-color: #B8860B;
+				position: absolute;
+				left: 126px;
+				top: 59px;
+			}
+			
+			.bg:hover .blades{
+				animation: xz 0.1s  infinite;
+			}
+			
+			@keyframes xz{
+				0%{
+					transform: rotate(0deg);
+				}
+				100%{
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+
+	<!-- 肉体 -->
+	<body>
+		<div class="bg">
+			
+			<div class="qt">
+				<div class="blades"></div>
+				<div class="stick"></div>
+				<div class="base"></div>
+			</div>
+			
+			<div class="header">		<!-- 头 -->
+				<div class="face"></div><!-- 脸 -->
+				<div class="eye">   	<!-- 眼 -->
+					<div class="eye-1">
+						<div class="e-1">
+							<div class="e-2"></div>
+						</div>
+					</div>
+					<div class="eye-1">
+						<div class="e-1">
+							<div class="e-2"></div>
+						</div>
+					</div>
+				</div>
+				<div class="nose">		<!-- 鼻子 -->
+					<div></div>
+				</div>
+				<div class="m-c"></div> <!-- 鼻子中线 -->
+				<div class="beard-l">		<!-- 胡子左边 -->
+					<div class="l-1"></div>
+					<div class="l-2"></div>
+					<div class="l-3"></div>
+				</div>
+				<div class="beard-r">		<!-- 胡子右边 -->
+					<div class="r-1"></div>
+					<div class="r-2"></div>
+					<div class="r-3"></div>
+				</div>
+				<div class="mouth"></div>
+			</div>
+		</div>
+	</body>
+</html>
