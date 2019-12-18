@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft Yahei Light", "Microsoft Yahei", "Pingfang SC", Helvetica, sans-serif, "等线";
+}
+
+/*文字选择样式*/
+*::selection {
+    background-color: white;
+    color: black;
+}
+
+/*每日背景图  必应每日壁纸*/
+body {
+    background-image: url(https://open.saintic.com/api/bingPic/);
+}
+
+/*链接盒子      start-----------*/
+.box-link{
+     width: 300px;
+     height: 300px;
+     position: absolute;
+     top: 0;
+     right: 0;
+     z-index: 2;
+}
+.link-page{
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.144);
+    filter: blur(0px);
+    transition: .5s;
+}
+.btn-box{
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    float: right;
+    margin-right: 50px;
+    border-top-color: white;
+}
+.link{
+    position: absolute;
+    top: 30px;
+    z-index: 3;
+    padding:0 20px;
+    width: 100%;
+    height: 0%;
+    box-sizing: border-box;
+    transition: .4s;
+    overflow: hidden;
+}
+.link ul>li{
+    list-style: none;
+    border-bottom: 1px solid #333333;
+    width: 100%;
+    padding: 5px 20px;
+    box-sizing: border-box;
+}
+
+.link ul>li>a{
+    color: white;
+    text-decoration: none;
+}
+.link ul>li>a:hover{
+    color: rgb(101, 233, 233);
+}
+
+.btn-hover:hover .link-page{
+    height: 100%;
+    filter: blur(4px);
+}
+
+.btn-hover:hover .link{
+    height: 100%;
+}
+
+
+
+
+
+
+/*链接盒子        end----------*/
+
+/*顶部时间  start--------*/
+.timepag {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.time-box {
+    width: 300px;
+    height: 150px;
+    font-size: 60px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+#time {
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+    transition: all 0.5s;
+}
+
+#time::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: 0px;
+    background: black;
+    transition: all 0.25s;
+    transform: scale3d(0, 1, 1);
+    transform-origin: 50% 0;
+}
+
+#time:hover::after {
+    transform: scale3d(1, 1, 1);
+}
+
+#time:hover {
+    font-size: 70px;
+}
+
+/*顶部时间  end--------*/
+
+
+/*搜索框    start------*/
+.serchp {
+    border: none;
+    height: 60px;
+    font-size: 18px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: block;
+    width: 400px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+    opacity: 1;
+    transition: all 0.25s;
+    transform-origin: 50% 0;
+
+}
+
+.serchp1 {
+    border: none;
+    height: 60px;
+    font-size: 18px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: block;
+    width: 800px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+    opacity: 1;
+    transition: all 0.25s;
+    transform-origin: 50% 0;
+    color: black;
+}
+
+.serch {
+    width: 100%;
+    height: 30px;
+    outline: medium;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 0px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+
+}
+
+.serchp:hover {
+    width: 800px;
+}
+
+.serchp:hover .serch {
+    color: white;
+}
+
+.but {
+    display: none;
+}
+
+/*搜索框    end------*/
+
+/*底部句子  调用一言 start*/
+.box {
+    width: 100%;
+    color: white;
+    height: 200px;
+    font-size: 25px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.5s;
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.11);
+
+}
+
+.box:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.box #from {
+    display: none;
+}
+
+.box:hover #from {
+    display: block;
+}
+
+.box p {
+    line-height: 80px;
+    margin: 13.3px 0;
+}
+
+/*底部句子  调用一言  end*/
