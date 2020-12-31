@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扑克牌切换</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .page {
+            padding: 2.5vw;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            perspective: 2000px;
+        }
+
+        input {
+            display: none;
+        }
+
+        label .wrapper {
+            margin: calc(4vw / 10);
+            position: relative;
+            height: calc(18vw * 1.4);
+            width: 18vw;
+            background-image: linear-gradient(112.1deg, rgba(32, 38, 57, 1) 11.4%, rgba(63, 76, 119, 1) 70.2%);
+            border-radius: calc(40vmin / 40);
+            box-shadow: 2px 2px 6px rgba(32, 38, 57, 0.5);
+            transition: transform 200ms linear, box-shadow 100ms linear;
+            transform: rotateY(0deg);
+            overflow: hidden;
+        }
+
+        .wrapper:hover {
+            filter: brightness(0.95);
+        }
+
+        input:checked+label .wrapper {
+            transform: rotateY(180deg);
+        }
+
+        .view {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            opacity: 1;
+            cursor: pointer;
+            transition: opacity 1ms linear 100ms;
+
+            position: relative;
+        }
+
+        .view::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-image: url(./cards.jpg);
+            background-size: cover;
+            transform: rotate(180deg);
+            animation: randomCard 25s steps(51, start) infinite;
+            animation-play-state: paused;
+        }
+
+        input:checked+label .view {
+            opacity: 0;
+        }
+
+        input:checked+label .view::before {
+            animation-play-state: running;
+        }
+
+        input:checked+label .wrapper {
+            background-color: #fff;
+        }
+
+        @keyframes randomCard {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 100% 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <input type="checkbox" id="card1" checked="checked">
+        <label for="card1">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card2" checked="checked">
+        <label for="card2">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card3" checked="checked">
+        <label for="card3">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card4" checked="checked">
+        <label for="card4">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card5" checked="checked">
+        <label for="card5">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card6" checked="checked">
+        <label for="card6">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card7" checked="checked">
+        <label for="card7">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card8" checked="checked">
+        <label for="card8">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card9" checked="checked">
+        <label for="card9">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card10" checked="checked">
+        <label for="card10">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card11" checked="checked">
+        <label for="card11">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card12" checked="checked">
+        <label for="card12">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card13" checked="checked">
+        <label for="card13">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card14" checked="checked">
+        <label for="card14">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card15" checked="checked">
+        <label for="card15">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card16" checked="checked">
+        <label for="card16">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card17" checked="checked">
+        <label for="card17">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card18" checked="checked">
+        <label for="card18">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card19" checked="checked">
+        <label for="card19">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card20" checked="checked">
+        <label for="card20">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card21" checked="checked">
+        <label for="card21">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card22" checked="checked">
+        <label for="card22">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card23" checked="checked">
+        <label for="card23">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card24" checked="checked">
+        <label for="card24">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card25" checked="checked">
+        <label for="card25">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card26" checked="checked">
+        <label for="card26">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card27" checked="checked">
+        <label for="card27">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card28" checked="checked">
+        <label for="card28">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card29" checked="checked">
+        <label for="card29">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card30" checked="checked">
+        <label for="card30">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card31" checked="checked">
+        <label for="card31">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card32" checked="checked">
+        <label for="card32">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card33" checked="checked">
+        <label for="card33">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card34" checked="checked">
+        <label for="card34">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card35" checked="checked">
+        <label for="card35">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card36" checked="checked">
+        <label for="card36">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card37" checked="checked">
+        <label for="card37">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card38" checked="checked">
+        <label for="card38">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card39" checked="checked">
+        <label for="card39">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card40" checked="checked">
+        <label for="card40">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card41" checked="checked">
+        <label for="card41">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card42" checked="checked">
+        <label for="card42">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card43" checked="checked">
+        <label for="card43">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card44" checked="checked">
+        <label for="card44">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card45" checked="checked">
+        <label for="card45">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card46" checked="checked">
+        <label for="card46">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card47" checked="checked">
+        <label for="card47">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card48" checked="checked">
+        <label for="card48">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card49" checked="checked">
+        <label for="card49">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card50" checked="checked">
+        <label for="card50">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card51" checked="checked">
+        <label for="card51">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+        <input type="checkbox" id="card52" checked="checked">
+        <label for="card52">
+            <div class="wrapper">
+                <div class="view"></div>
+            </div>
+        </label>
+
+    </div>
+</body>
+
+</html>
